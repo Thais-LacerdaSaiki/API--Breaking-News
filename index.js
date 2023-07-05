@@ -1,5 +1,11 @@
 const express = require("express");
+const userRoute = require('./src/routes/user.route')
+
 const app = express();
+
+app.use('/soma', userRoute);
+app.listen(3000);
+
 
 //ROTA
     // METHOD HTTP - CRUD (CREATE, READ, UPDATE, DELETE)
@@ -15,9 +21,8 @@ const app = express();
 // FUNCTION (CALLBACK) - é a  (=> arrow function - função anonima que recebe os parametros req e res) Responsável por executar um comando ela recebe a requisição e retorna uma resposta , nem sempre tem algum valor, pode até ter uma valor dentro do parametro ou dentro da rota.
 // Ela é executada por trás de outra função por isso recebe o nome de CALLBACK
 
-app.get("/soma", (req, res) => {
+/*app.get("/soma", (req, res) => {
     const soma = 100 + 1;
     res.send({soma: soma}) 
-});
+}); */
 
-app.listen(3000);
