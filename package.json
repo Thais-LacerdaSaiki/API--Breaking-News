@@ -4,14 +4,17 @@
   "description": "API for SPA Breaking News",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "start": "nodemon index",
     "dev": "nodemon index"
   },
   "keywords": [],
   "author": "Thais BST",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "mongodb": "^5.7.0",
+    "mongoose": "^7.3.1",
     "nodemon": "^2.0.22"
   }
 }
